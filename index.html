@@ -4,22 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>BitPay.Creditcard – Bitcoin & Crypto Card Payments Explained</title>
-  <meta name="description" content="Understand how Bitcoin and crypto-linked credit cards work: conversion paths, fees, limits, rewards and risk. Independent explainer for cardholders, merchants and builders." />
+  <title>BitPay.Creditcard – Crypto Card Payments & Processors Explained</title>
+  <meta name="description" content="Understand how BitPay-style crypto card payments and processors work: wallets, conversion to fiat, merchant settlement, fees and risk. Neutral, educational explanation." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://bitpay.creditcard/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="BitPay.Creditcard – Bitcoin & Crypto Card Payments Explained" />
-  <meta property="og:description" content="Learn how Bitcoin and crypto balances are turned into fiat at the point of sale, what fees apply and how rewards are structured." />
+  <meta property="og:title" content="BitPay.Creditcard – Crypto Payment Processors & Cards Explained" />
+  <meta property="og:description" content="Step-by-step explanation of how crypto payment processors connect wallets, cards, merchants and banks." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bitpay.creditcard/" />
   <meta property="og:image" content="https://choose.creditcard/preview.png?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=og_image" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BitPay.Creditcard – Bitcoin & Crypto Card Payments Explained" />
-  <meta name="twitter:description" content="Independent explanation of Bitcoin-backed cards, conversion flows, spreads, fees and practical risks." />
+  <meta name="twitter:title" content="BitPay.Creditcard – Crypto Card Payments Explained" />
+  <meta name="twitter:description" content="Learn how crypto payment processors bridge wallets, cards, merchants and traditional banking rails." />
   <meta name="twitter:image" content="https://choose.creditcard/preview.png?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=twitter_image" />
 
   <!-- GA4 -->
@@ -34,7 +34,7 @@
   <!-- Tailwind for utility classes -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Your shared minisite styles -->
+  <!-- Shared minisite styles -->
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body class="bg-slate-950 text-slate-100">
@@ -44,12 +44,12 @@
         <div class="cc-logo">CC</div>
         <div class="brand-text">
           <div class="brand-title">BitPay.Creditcard</div>
-          <div class="brand-subtitle">Bitcoin & Crypto Card Payments Explained</div>
+          <div class="brand-subtitle">Crypto Payment Processors & Cards</div>
         </div>
       </div>
       <nav class="nav-links" aria-label="Page navigation">
         <a href="#overview">Overview</a>
-        <a href="#mechanics">How It Works</a>
+        <a href="#flow">How It Works</a>
         <a href="#compare">Compare</a>
       </nav>
     </div>
@@ -66,195 +66,194 @@
     <!-- Hero -->
     <section class="hero">
       <div class="hero-content">
-        <h1>How Bitcoin & Crypto Card Payments Actually Clear</h1>
+        <h1>How Crypto Payment Processors Turn Coins Into Card Payments</h1>
         <p class="hero-lead">
-          BitPay.Creditcard looks at what happens when you “spend Bitcoin with a card”: how balances are converted, which rails
-          move the money, and where fees, spreads and tax questions show up in the process.
+          Crypto payment processors sit between your wallet, a card and the merchant. This page explains how
+          they authorize, convert and settle payments — and which fees and risks are hidden in the flow.
         </p>
-        <a class="cta" href="https://choose.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=hero_cta">
-          Compare crypto-linked credit cards
+        <a class="cta" href="https://choose.creditcard/crypto/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=hero_cta">
+          Explore Crypto &amp; Web3 Cards hub
         </a>
       </div>
     </section>
 
-    <!-- Content sections -->
+    <!-- Overview -->
     <section id="overview" class="section">
-      <h2>What Is a Bitcoin or Crypto Card?</h2>
+      <h2>What Is a Crypto Payment Processor?</h2>
       <p>
-        A Bitcoin or crypto card is a regular network card (Visa, Mastercard or similar) that draws value from a
-        connected wallet or exchange account. At checkout the merchant is still paid in fiat; the crypto balance is
-        converted behind the scenes to fund that payment.
+        A crypto payment processor is an intermediary that lets merchants accept crypto or crypto-backed card
+        payments without holding coins themselves. It connects:
       </p>
+      <ul>
+        <li><strong>Customer wallets</strong> – where crypto is held or funded</li>
+        <li><strong>Cards or payment tokens</strong> – used at physical or online terminals</li>
+        <li><strong>Merchants</strong> – who usually want settlement in fiat currency</li>
+        <li><strong>Banks and card networks</strong> – that handle final fiat settlement</li>
+      </ul>
       <p>
-        Most products therefore behave like a prepaid or debit card layered on top of a trading account. Your on-chain
-        holdings are not pushed directly across the card network. Instead, a service provider sells a slice of your
-        crypto and uses traditional card rails to settle the transaction.
-      </p>
-    </section>
-
-    <section id="mechanics" class="section">
-      <h2>How a BitPay-Style Transaction Flows</h2>
-      <p>
-        When you tap or insert the card, the terminal sends an authorisation request through the usual card network.
-        The processor checks your linked wallet or account, verifies that sufficient value is available, and either
-        converts crypto immediately or reserves an amount for later batch conversion.
-      </p>
-      <p>
-        In real-time conversion models, a quote is taken from the provider’s order book at or near the moment of
-        purchase. In preload models, you first top up a fiat balance from your crypto holdings, and the card then behaves
-        like any other balance-funded card until that load is exhausted.
+        The processor handles price quotes, on-the-fly conversion, risk, compliance and merchant payouts,
+        so the merchant sees something that looks like a normal card settlement.
       </p>
     </section>
 
+    <!-- Flow -->
+    <section id="flow" class="section">
+      <h2>How a BitPay-Style Payment Flow Works</h2>
+
+      <h3>1. Quote & Price Lock</h3>
+      <p>
+        The processor generates a payment request or invoice in crypto, based on the fiat amount the merchant needs.
+        A short time window locks the rate, often with a small spread added.
+      </p>
+
+      <h3>2. Authorization & Confirmation</h3>
+      <p>
+        The customer either:
+      </p>
+      <ul>
+        <li>pays directly from a wallet (on-chain or via a supported network), or</li>
+        <li>uses a crypto-linked card that triggers a conversion in the background.</li>
+      </ul>
+      <p>
+        Once the transaction is seen and meets confirmation criteria, the processor marks the invoice as paid.
+      </p>
+
+      <h3>3. Conversion & Settlement</h3>
+      <p>
+        The processor converts crypto to fiat (or to stablecoins) and settles funds to the merchant’s bank
+        account or merchant wallet, usually minus processor fees.
+      </p>
+    </section>
+
+    <!-- Risks & Considerations -->
     <section class="section">
-      <h2>Spreads, Fees and Effective Exchange Rates</h2>
+      <h2>Key Risks & Considerations</h2>
       <p>
-        Crypto card marketing often highlights “no extra fees”, but the real cost of using Bitcoin or other assets at
-        checkout usually sits in the spread between the quoted rate and the mid-market rate, plus any network and
-        service fees.
+        Crypto payment processors simplify the experience, but introduce some moving parts that users and merchants
+        should understand:
       </p>
+      <ul>
+        <li><strong>Rate risk:</strong> volatility between quote and confirmation can cause gains or losses.</li>
+        <li><strong>Fee structure:</strong> spreads, network fees and processor charges can stack up.</li>
+        <li><strong>Regulation:</strong> KYC/AML rules apply to processors, card issuers and sometimes merchants.</li>
+        <li><strong>Reversals & chargebacks:</strong> crypto itself is hard to reverse, but card rails may still
+            support disputes.</li>
+      </ul>
       <p>
-        To understand the true cost, you need to look at three layers together: conversion spread, foreign transaction
-        fees (if you pay in another currency) and any flat or percentage charges on ATM withdrawals or top-ups. A small
-        percentage at each stage can add up quickly, especially on frequent, smaller purchases.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Rewards and Incentives on Crypto-Linked Cards</h2>
-      <p>
-        Some Bitcoin and crypto cards pay rewards in native tokens, stablecoins or standard card rewards. The headline
-        rate can look generous, but it needs to be weighed against spreads, volatility and any lock-up or staking
-        requirements attached to the programme.
-      </p>
-      <p>
-        It is also worth checking whether rewards are paid on all transactions or only on particular categories, and how
-        they are treated when you refund purchases or move assets off the platform. Terms can differ significantly
-        between providers, even if the branding looks similar.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Risk, Volatility and Tax Considerations</h2>
-      <p>
-        For many jurisdictions, converting crypto to fiat is treated as a disposal for tax purposes. Using a Bitcoin
-        card for everyday purchases can therefore generate a long trail of small taxable events, each with its own
-        acquisition price and disposal value.
-      </p>
-      <p>
-        Volatility adds another layer of complexity: your card balance in fiat terms can move sharply between the moment
-        you decide to hold assets for spending and the moment you actually pay. Good record-keeping and exportable
-        transaction histories are important if you plan to use a crypto card regularly.
+        For everyday spending, it’s important to weigh convenience against total cost and complexity.
       </p>
     </section>
 
     <!-- Comparison block -->
     <section id="compare" class="section">
-      <h2>Compare Bitcoin & Crypto Card Features</h2>
+      <h2>How Crypto Processors Compare to Traditional Acquirers</h2>
       <div class="table-wrap">
         <table class="table">
           <thead>
             <tr>
-              <th>Feature</th>
-              <th>What to Look For</th>
-              <th>Why It Matters</th>
+              <th>Aspect</th>
+              <th>Crypto Processor</th>
+              <th>Traditional Acquirer</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Conversion Model</td>
-              <td>Instant vs. preload, stablecoin support, clear rate explanation</td>
-              <td>Determines when price risk is locked in and how predictable costs are.</td>
+              <td>Settlement Currency</td>
+              <td>Crypto, stablecoins or fiat</td>
+              <td>Fiat only</td>
+            </tr>
+            <tr>
+              <td>Volatility Risk</td>
+              <td>Managed via spreads, short lock windows</td>
+              <td>No crypto volatility, FX risk only</td>
+            </tr>
+            <tr>
+              <td>Network & Rails</td>
+              <td>On-chain + card or wallet rails</td>
+              <td>Card networks + banking rails</td>
             </tr>
             <tr>
               <td>Fee Structure</td>
-              <td>Published spreads, FX fees, ATM and service fees</td>
-              <td>Small differences here can outweigh advertised rewards.</td>
+              <td>Processor fee + spread + network fees</td>
+              <td>Interchange + scheme fees + acquirer margin</td>
             </tr>
             <tr>
-              <td>Supported Assets</td>
-              <td>Range of coins, stablecoins and local currencies</td>
-              <td>Affects flexibility and how easily you can manage volatility.</td>
-            </tr>
-            <tr>
-              <td>Reporting Tools</td>
-              <td>Downloadable histories, tax reports, API access</td>
-              <td>Makes it easier to handle accounting and tax where required.</td>
-            </tr>
-            <tr>
-              <td>Regulatory Status</td>
-              <td>Licensing, segregated funds, clear risk disclosures</td>
-              <td>Signals how the provider is supervised and what protections exist.</td>
+              <td>Customer Experience</td>
+              <td>Pay with coins or crypto-backed card</td>
+              <td>Pay with traditional debit/credit card</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p class="small">
-        For live comparisons across different crypto-linked cards and traditional travel or rewards cards, visit
-        <a href="https://choose.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=comparison_section">
-          Choose.Creditcard
+        For structured comparisons of card products that interact with crypto, visit
+        <a href="https://choose.creditcard/crypto/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=comparison_section">
+          the Crypto &amp; Web3 Cards hub at Choose.Creditcard
         </a>.
       </p>
     </section>
 
     <!-- Cluster links -->
     <section class="section">
-      <h2>Explore Related Payment Technologies</h2>
+      <h2>Explore Related Crypto &amp; Payment Topics</h2>
       <div class="cluster-grid">
+        <a class="cluster-card" href="https://cryptopay.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=cluster_cryptopay">
+          <h3>CryptoPay.Creditcard</h3>
+          <p>How crypto credit cards convert coins to fiat at the point of sale.</p>
+        </a>
         <a class="cluster-card" href="https://bitcoinpay.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=cluster_bitcoinpay">
           <h3>BitcoinPay.Creditcard</h3>
           <p>Bitcoin-focused card payments and settlement patterns.</p>
         </a>
         <a class="cluster-card" href="https://btcpay.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=cluster_btcpay">
           <h3>BTCPay.Creditcard</h3>
-          <p>Merchant-side BTC processing, gateways and invoicing.</p>
+          <p>Merchant-side BTC processing flows and gateways.</p>
         </a>
         <a class="cluster-card" href="https://tokens.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=cluster_tokens">
           <h3>Tokens.Creditcard</h3>
-          <p>Tokenised rewards, governance tokens and incentive models.</p>
+          <p>Reward and utility tokens built around card spending.</p>
         </a>
         <a class="cluster-card" href="https://defipay.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=cluster_defipay">
           <h3>DefiPay.Creditcard</h3>
-          <p>DeFi-linked card products and yield-routing strategies.</p>
-        </a>
-        <a class="cluster-card" href="https://virtualpay.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=cluster_virtualpay">
-          <h3>VirtualPay.Creditcard</h3>
-          <p>Virtual cards and wallet-based payment flows.</p>
+          <p>DeFi-linked card products that route yield and liquidity.</p>
         </a>
       </div>
     </section>
 
-    <!-- Collection section -->
+    <!-- Collection / snippet -->
     <section class="section">
       <h2>Part of The CreditCard Collection</h2>
       <p class="small">
-        BitPay.Creditcard is one spoke in <strong>The CreditCard Collection</strong> — a network of focused microsites operated by ronarn AS. Each site explains a single aspect of card or payment infrastructure and then connects you to independent comparison tools.
+        BitPay.Creditcard is part of <strong>The CreditCard Collection</strong> — a network of narrowly focused
+        minisites by ronarn AS. Each page explains one aspect of card or payment design in plain language,
+        then links back to structured comparison hubs.
       </p>
       <p class="small">
-        This page focuses on Bitcoin and crypto-funded card payments. It does not issue cards, hold customer funds or provide investment advice. Instead, it restates how providers describe their products in documentation so you can see the moving parts more clearly.
-      </p>
-      <p class="small">
-        All content is informational only. Using crypto-backed cards can involve market risk, counterparty risk and tax obligations. Always read official terms and consider independent advice where appropriate.
+        We do not issue cards or operate payment processors. Content here is informational only,
+        based on typical patterns and public documentation. It is not financial, investment or tax advice.
       </p>
 
-      <!-- Crypto & Web3 hub snippet -->
-      <div class="hub-link">
-        <a href="https://choose.creditcard/crypto/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=minisite_to_hub"
-           class="text-sm text-slate-600 hover:text-slate-900">
-          Learn more at the Crypto &amp; Web3 hub
+      <!-- Hub snippet -->
+      <p class="text-xs text-slate-500 mt-6">
+        This microsite is connected to the
+        <a href="https://choose.creditcard/crypto/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=hub_crypto"
+           class="font-medium hover:text-slate-200">
+          Crypto &amp; Web3 Cards hub
         </a>
-      </div>
+        on <a href="https://choose.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=hub_root" class="font-medium hover:text-slate-200">Choose.Creditcard</a>.
+        Educational only – not an endorsement of any asset, wallet or processor.
+      </p>
     </section>
 
     <!-- Bottom CTA -->
     <section class="section">
-      <h2>Ready to Compare Crypto & Traditional Cards?</h2>
+      <h2>Ready to Explore Crypto-Linked Cards?</h2>
       <p class="small">
-        Use BitPay.Creditcard to understand how Bitcoin and other assets are turned into card payments — then head over
-        to the main hub to compare crypto-linked cards with conventional travel, cashback and rewards products.
+        Use BitPay.Creditcard to understand how processors bridge crypto and card rails — then move to the main
+        hub to see how different card types and technologies fit together.
       </p>
-      <a class="cta" href="https://choose.creditcard/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=bottom_cta">
-        Go to Choose.Creditcard
+      <a class="cta" href="https://choose.creditcard/crypto/?utm_source=bitpay.creditcard&utm_medium=referral&utm_campaign=bottom_cta">
+        Go to Crypto &amp; Web3 Cards hub
       </a>
     </section>
   </main>
